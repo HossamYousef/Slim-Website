@@ -13,7 +13,7 @@ In your applications, you should transition to using the withStatus() and withBo
 Example In Slim 2.x:
 
 {% highlight php %}
-$app->get('/', function () {  $app->halt(400, 'Bad Request'); });
+$app->get('/', function () use($app){  $app->halt(400, 'Bad Request'); });
 {% endhighlight %}
 
 And now in Slim 3.x:
